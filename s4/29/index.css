@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(26, 16, 56);
+}
+div {
+  width: 200px;
+  height: 100px;
+  color: yellow;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  /* overflow: hidden; */
+  /* border: 2px solid yellow; */
+  transition: all 0.5s;
+}
+div:before {
+  content: "";
+  width: 1%;
+  height: 120%;
+  top: -10px;
+  left: 0%;
+  background-color: tomato;
+  position: absolute;
+  transition: all 0.5s;
+  z-index: -1;
+}
+div:after {
+  content: "";
+  width: 1%;
+  height: 120%;
+  bottom: -10px;
+  right: 0%;
+  background-color: yellow;
+  position: absolute;
+  transition: all 0.5s;
+  z-index: -1;
+}
+span:before {
+  content: "";
+  width: 120%;
+  height: 1%;
+  top: 0%;
+  left: -10%;
+  background-color: tomato;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.5s;
+}
+span:after {
+  content: "";
+  width: 120%;
+  height: 1%;
+  bottom: 0%;
+  right: -10%;
+  background-color: yellow;
+  position: absolute;
+  transition: all 0.5s;
+  z-index: -1;
+}
+div:hover:before {
+  left: 100%;
+}
+div:hover:after {
+  right: 100%;
+}
+div:hover span:before {
+  top: 100%;
+}
+div:hover span:after {
+  bottom: 100%;
+}
+div:hover {
+  color: tomato;
+  font-weight: 500;
+}

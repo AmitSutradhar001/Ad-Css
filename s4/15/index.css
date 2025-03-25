@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 500px;
+}
+div {
+  width: 100px;
+  height: 100px;
+  color: rgb(223, 107, 6);
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  border: 2px solid #09e7e7;
+  transition: color 2s;
+  overflow: hidden;
+}
+div:before {
+  content: "";
+  position: absolute;
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: transform 2s;
+}
+div:after {
+  content: "";
+  position: absolute;
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: top right;
+  transform: rotate(-90deg);
+  transition: transform 2s;
+}
+div:hover:before {
+  transform: rotate(0deg);
+}
+div:hover:after {
+  transform: rotate(0deg);
+}
+div:hover {
+  color: antiquewhite;
+}

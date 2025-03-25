@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: rgb(26, 16, 56); */
+}
+div {
+  width: 200px;
+  height: 100px;
+  color: black;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  /* padding: 10px; */
+  overflow: hidden;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+div span {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  /* background-color: transparent; */
+  border: 2px solid orange;
+}
+span:before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 200%;
+  top: -50%;
+  background-color: white;
+  transform: rotate(40deg);
+  transition: all 0.5s;
+}
+div:hover span:before {
+  background-color: brown;
+  transform: scale(10);
+}

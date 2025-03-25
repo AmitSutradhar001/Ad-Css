@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 500px;
+}
+div {
+  width: 200px;
+  height: 100px;
+  color: #fff;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #09e7e7;
+  background-color: rgb(20, 18, 18);
+  overflow: hidden;
+  transition: all 1s;
+}
+div:hover {
+  background-color: brown;
+}
+div:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4;
+  width: 100%;
+  height: 30%;
+  background-color: #fff;
+  transform: translate(-100%) rotate(45deg);
+  transition: all 2s;
+}
+div:hover:before {
+  transform: translate(100%) rotate(45deg);
+}

@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 500px;
+}
+div {
+  width: 200px;
+  height: 100px;
+  color: rgb(162, 119, 108);
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid tomato;
+  /* background-color: rgb(131, 131, 253); */
+  /* overflow: hidden; */
+  transition: all 0.5s;
+}
+div:before {
+  content: "Yup!";
+  position: absolute;
+  left: 0;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid tomato; */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(135, 250, 59);
+  color: #fff;
+  transition: all 0.5s;
+}
+div:after {
+  content: "Yup!";
+  position: absolute;
+  left: -100%;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid tomato; */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(135, 250, 59);
+  color: #fff;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s;
+}
+div:hover:before {
+  transform: translateX(100%) scale(0) rotateY(360deg);
+  opacity: 0;
+}
+div:hover:after {
+  transform: scale(1) translateX(100%) rotateY(360deg);
+  opacity: 100;
+}

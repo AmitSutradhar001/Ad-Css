@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.sub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  transform: translate(-100%);
+  opacity: 1;
+  transition: all 0.5s;
+  background: rgb(29, 6, 113);
+}
+.container:hover .sub {
+  transform: translate(0);
+}
+.container:hover img {
+  transform: translate(100%);
+}

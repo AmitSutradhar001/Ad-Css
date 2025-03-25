@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: rgb(26, 16, 56); */
+}
+div {
+  width: 200px;
+  height: 100px;
+  color: white;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  /* border: 2px solid orange; */
+  font-size: 25px;
+  transition: all 0.5s;
+}
+div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: blue;
+  opacity: 50%;
+  transition: all 0.5s;
+}
+div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: red;
+  opacity: 70%;
+  transition: all 0.5s;
+}
+
+div:hover:before {
+  transform: skew(30deg);
+  top: -5%;
+}
+div:hover:after {
+  transform: skew(30deg);
+  top: 5%;
+}
