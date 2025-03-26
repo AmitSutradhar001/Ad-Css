@@ -1,0 +1,96 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+  font-size: 20px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+li:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 25%;
+  height: 100%;
+  transform: translateY(-100%);
+  background-color: blue;
+  transition: all 0.1s;
+  z-index: -1;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  width: 25%;
+  height: 100%;
+  transform: translateY(-100%);
+  background-color: blue;
+  z-index: -1;
+  transition: all 0.1s ease 0.1s;
+}
+
+span {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0%;
+  left: 50%;
+
+  z-index: -1;
+  transition: all 0.3s;
+}
+span::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  transform: translateY(-100%);
+  background-color: blue;
+  transition: all 0.1s ease 0.2s;
+}
+span::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0%;
+  left: 50%;
+  transform: translateY(-100%);
+  background-color: blue;
+  transition: all 0.1s ease 0.3s;
+}
+li:hover span::before {
+  transform: translateY(0);
+}
+li:hover span::after {
+  transform: translateY(0);
+}
+li:hover {
+  color: azure;
+}
+li:hover:before {
+  transform: translateY(0);
+}
+li:hover:after {
+  transform: translateY(0);
+}

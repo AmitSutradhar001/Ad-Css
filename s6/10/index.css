@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(7, 61, 43);
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 8px;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+  font-size: 50px;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+li:before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-right: 8px solid aqua;
+  overflow: hidden;
+  color: aqua;
+  transition: all 0.4s;
+}
+li:hover::before {
+  width: 100%;
+}
