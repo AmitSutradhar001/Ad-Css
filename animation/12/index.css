@@ -1,0 +1,26 @@
+body {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  font-size: 200px;
+  font-weight: bold;
+  background-clip: text;
+  color: transparent;
+  background-image: url("https://wallpapers.com/images/hd/cool-4k-ultra-hd-nao22k6od4a4djyl.jpg");
+  /* background-position: bottom left; */
+  animation: move linear infinite 3s;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}

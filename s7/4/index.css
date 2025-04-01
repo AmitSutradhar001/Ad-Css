@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h4,
+p {
+  margin: 0px;
+  color: white;
+  text-align: justify;
+}
+
+.con {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, #ea29a6, #e429ea, #2463f5);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.imgsub {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+img {
+  width: 70%;
+  left: 15%;
+  position: relative;
+  transition: all 0.3s;
+}
+.con:hover img {
+  width: 100%;
+  transform: translate(50%);
+  opacity: 0;
+}
+.sub {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(5px);
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.con:hover .sub {
+  filter: none;
+}

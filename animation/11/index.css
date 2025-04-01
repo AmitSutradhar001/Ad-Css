@@ -1,0 +1,65 @@
+body {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  transform: rotate(45deg);
+  animation: sc 0.8s linear infinite;
+  transition: all 0.5s;
+}
+div:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: red;
+  top: -50%;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+div:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  top: 0%;
+  left: -50%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+@keyframes sc {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  25% {
+    transform: rotate(45deg) scale(1);
+  }
+  30% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(45deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}

@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h4,
+p {
+  margin: 0px;
+  color: white;
+  text-align: justify;
+}
+
+.con {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, #ea29a6, #e429ea, #2463f5);
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.5s;
+}
+.imgsub {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+img {
+  width: 70%;
+  left: 15%;
+  position: relative;
+  transition: all 0.3s;
+}
+.con:hover img {
+  width: 100%;
+  transform: translate(25%);
+}
+.sub {
+  width: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.con:hover .sub {
+  opacity: 1;
+}

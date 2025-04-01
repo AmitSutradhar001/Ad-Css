@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 120px;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(182, 180, 180);
+}
+h1:before {
+  position: absolute;
+  content: "AMIT";
+  width: 0%;
+  top: 0;
+  left: 0;
+  color: brown;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+h1:hover:before {
+  width: 100%;
+}

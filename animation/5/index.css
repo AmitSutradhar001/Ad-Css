@@ -1,0 +1,27 @@
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0px; */
+  background-color: rgb(159, 4, 149);
+}
+.container {
+  width: 660px;
+  height: 200px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+h2 {
+  font-size: 200px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuHhURU0erg6MkQHDeoqhftclL_NUrqODFrQ&s");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+}

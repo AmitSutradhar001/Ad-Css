@@ -1,0 +1,69 @@
+body {
+  height: 100dvh;
+  width: 100dvw;
+}
+ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  background-image: url("./rain.png");
+  animation: move linear infinite 1s;
+}
+li {
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  position: relative;
+  border-radius: 50%;
+}
+li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(65, 65, 235);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dotted blue;
+  box-sizing: border-box;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+li:hover:before {
+  transform: scale(0.7);
+  opacity: 1;
+}
+li:hover::after {
+  opacity: 1;
+  animation: circle linear 1s infinite;
+}
+@keyframes circle {
+  from {
+    transform: scale(0.9) rotate(0);
+  }
+  to {
+    transform: scale(0.9) rotate(360deg);
+  }
+}

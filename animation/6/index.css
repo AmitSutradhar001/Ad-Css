@@ -1,0 +1,29 @@
+body {
+  height: 100dvh;
+  /* margin: 0px; */
+  background-color: rgb(159, 4, 149);
+}
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(80dvw);
+  }
+}

@@ -1,0 +1,70 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+h1,
+h4,
+p {
+  margin: 0px;
+  padding: 3px;
+  color: white;
+  text-align: justify;
+}
+.con {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, #ea29a6, #e429ea, #2463f5);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.sub {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+  transition: all 0.3s;
+}
+.imgsub {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, #2463f5, #f524d2);
+  transition: all 0.3s;
+}
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.con:hover .imgsub {
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con:hover img {
+  width: 50%;
+  height: 70%;
+  border-radius: 50%;
+  background: linear-gradient(to right bottom, #2463f5, #f524d2);
+}

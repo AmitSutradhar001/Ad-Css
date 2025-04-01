@@ -1,0 +1,65 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid aqua;
+  box-shadow: 0 0 8px aqua;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+i {
+  color: rgb(10, 189, 141);
+  font-size: larger;
+  transition: all 0.5s;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background-color: rgb(98, 51, 228);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: translate(-100%, 100%) rotate(45deg);
+  transition: all 0.9s;
+}
+.icon:hover::before {
+  animation: animation 0.9s 1 forwards;
+}
+.icon:hover i {
+  color: white;
+  transform: scale(1.5);
+}
+
+@keyframes animation {
+  0% {
+    transform: translate(-100%, 100%) rotate(45deg);
+  }
+  50% {
+    transform: translate(0%, 0%) rotate(45deg);
+  }
+  100% {
+    transform: translate(-15%, 15%) rotate(45deg);
+  }
+}
