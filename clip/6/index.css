@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: white;
+}
+
+div {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /* background-color: aqua; */
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+h1 {
+  margin: 0;
+  position: absolute;
+  justify-self: center;
+  text-align: justify;
+  font-size: 200px;
+}
+h1:nth-child(1) {
+  color: brown;
+  clip-path: polygon(100% 0, 0% 100%, 0 0);
+}
+h1:nth-child(1):hover {
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+h1:nth-child(2) {
+  color: blue;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+h1:nth-child(2):hover {
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+h1 span {
+  font-size: 80px;
+  letter-spacing: 10px;
+  color: rgb(112, 111, 111);
+  transition: all 0.5s;
+}
+h1:hover span {
+  color: green;
+  text-shadow: 0 0 5px green, 0 0 10px rgb(2, 201, 2), 0 0 15px rgb(3, 250, 3);
+}

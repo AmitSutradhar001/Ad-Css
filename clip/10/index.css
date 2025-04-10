@@ -1,0 +1,50 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #111;
+}
+
+div {
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1:nth-child(1) {
+  padding: 10px;
+  color: blue;
+  background-color: white;
+  position: absolute;
+  font-size: 200px;
+  cursor: pointer;
+  border-radius: 25px;
+  clip-path: polygon(68% 0, 0 0, 0 100%, 67% 100%, 39% 51%);
+  transition: all 0.5s;
+}
+h1:nth-child(2) {
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+  background-color: blue;
+  position: absolute;
+  font-size: 200px;
+  cursor: pointer;
+  clip-path: polygon(58% 0, 100% 0, 100% 99%, 61% 100%, 28% 54%);
+  transition: all 0.5s;
+}
+
+h1:nth-child(1):hover {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%, 100% 53%);
+  z-index: 3;
+}
+h1:nth-child(2):hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 51%);
+  z-index: 3;
+}

@@ -1,0 +1,41 @@
+body {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+div {
+  width: 200px;
+  height: 3px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  line-height: 200px;
+  box-sizing: border-box;
+  position: relative;
+  animation: rotate infinite linear 2s alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  45% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}

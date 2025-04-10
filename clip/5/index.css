@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: white;
+}
+
+div {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: aqua;
+  clip-path: circle(10.9% at 86% 14%);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+h1,
+p {
+  margin: 0;
+  justify-self: center;
+  text-align: justify;
+}
+
+div:hover {
+  clip-path: circle(70.7% at 50% 50%);
+}

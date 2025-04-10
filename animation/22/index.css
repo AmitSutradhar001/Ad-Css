@@ -1,0 +1,55 @@
+body {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+div {
+  width: 90px;
+  height: 90px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  text-align: center;
+  line-height: 200px;
+  box-sizing: border-box;
+  position: relative;
+  animation: rotate infinite linear 2s alternate;
+}
+span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: small 0.5s linear infinite;
+}
+span:nth-child(4):before,
+span:nth-child(5):before,
+span:nth-child(6):before {
+  animation-delay: 0.1s;
+}
+span:nth-child(7):before,
+span:nth-child(8):before,
+span:nth-child(9):before {
+  animation-delay: 0.2s;
+}
+@keyframes small {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+  }
+}

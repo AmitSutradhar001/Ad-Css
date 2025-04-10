@@ -1,0 +1,68 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.one {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  border: 2px solid greenyellow;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.two {
+  color: blue;
+  clip-path: polygon(0 0, 100% 0, 100% 49%, 0 49%);
+  animation: split 2s linear infinite;
+}
+.three {
+  color: brown;
+  clip-path: polygon(0 100%, 100% 100%, 100% 50%, 0 49%);
+  animation: split 2s linear infinite reverse;
+}
+
+@keyframes split {
+  0% {
+    top: 0;
+    left: 100%;
+  }
+  40% {
+    top: 0;
+    left: 0;
+  }
+  60% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: -100%;
+  }
+}

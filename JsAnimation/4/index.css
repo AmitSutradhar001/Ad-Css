@@ -1,0 +1,99 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+h1 {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+.main {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.one {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(29, 23, 56);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.big {
+  width: 300px;
+  height: 200px;
+  transition: all 0.5s;
+}
+.image {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+img {
+  width: 250px;
+  height: 100px;
+  z-index: 3;
+}
+.two {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(29, 23, 56);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  top: -2px;
+  cursor: pointer;
+}
+.two:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: -10px;
+  left: -50%;
+  border-top: 10px solid rgb(29, 23, 56);
+  border-right: 10px solid rgb(29, 23, 56);
+  border-top-right-radius: 100%;
+}
+.two:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: -10px;
+  right: -50%;
+  border-top: 10px solid rgb(29, 23, 56);
+  border-left: 10px solid rgb(29, 23, 56);
+  border-top-left-radius: 100%;
+}
+.three {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  box-sizing: border-box;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transition: all 0.5s;
+}
+.rotated {
+  transform: translate(-50%) rotate(225deg);
+}
