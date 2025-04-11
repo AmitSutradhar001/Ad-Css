@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: #090f45;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s1 {
+  background-color: rgb(229, 255, 0);
+}
+.s2 {
+  background-color: rgb(255, 0, 93);
+}
+.s3 {
+  background-color: aqua;
+}
+.s4 {
+  background-color: rgb(255, 123, 0);
+}
+div {
+  font-size: 100px;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.c1.show-animation {
+  opacity: 1;
+  transform: rotate(360deg);
+  transition: all 0.5s;
+}
+.c2.show-animation {
+  opacity: 1;
+  animation: c2A linear 0.5s;
+}
+@keyframes c2A {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
